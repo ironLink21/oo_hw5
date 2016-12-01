@@ -61,11 +61,11 @@ public class Person {
         this.stateFileNumber = stateFileNumber;
     }
 
-    public String getSocialSecurityNumber() {
+    public String getSSN() {
         return socialSecurityNumber;
     }
 
-    public void setSocialSecurityNumber(String socialSecurityNumber) {
+    public void setSSN(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
     }
 

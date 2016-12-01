@@ -1,15 +1,18 @@
 package Parser;
 
 import Person.Bucket;
+import Person.Person;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 /**
  * Created by seth on 11/30/16.
  */
 public interface Parser {
-    Bucket openFile(String location) throws Exception;
+    
+    void openFile(String location) throws Exception;
 
     public static Parser create(String location) {
         Pattern json = Pattern.compile("(.json)$");

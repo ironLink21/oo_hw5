@@ -9,11 +9,10 @@ import java.io.File;
 public class main {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("src/main/resources/PersonTestSet_01.json");
-//        File file = new File("documents/test_data/PersonTestSet_11.xml");
+        String fileSt = new File("src/main/resources/PersonTestSet_01.json").getAbsolutePath();
+//        String fileSt = new File("src/main/resources/PersonTestSet_11.xml").getAbsolutePath();
 
-        if(file.exists()) {
-            String fileSt = file.getAbsolutePath();
+        if(!fileSt.equals("")) {
             Parser parser = Parser.create(fileSt);
 //            Matcher matcher = new Matcher();
 
@@ -22,7 +21,7 @@ public class main {
                 return;
             }
 
-            Bucket bucket = parser.openFile(fileSt);
+            parser.openFile(fileSt);
 
             // run matchers
 //            MatchesBucket matchesBucket = matcher.findMatches(bucket);

@@ -12,14 +12,15 @@ import java.util.ArrayList;
  * Created by seth on 11/30/16.
  */
 public class JsonParser implements Parser {
+
     @Override
-    public Bucket openFile(String location) throws Exception {
+    public void openFile(String location) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
 
         TypeReference<ArrayList<Person>> type = new TypeReference<ArrayList<Person>>(){};
         ArrayList<Person> bucketArr = mapper.readValue(new File(location), type);
 
-        return new Bucket(bucketArr);
+        new Bucket(bucketArr);
     }
 }

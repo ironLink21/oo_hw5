@@ -6,7 +6,10 @@ import java.util.ArrayList;
  * Created by seth on 11/30/16.
  */
 public class Bucket {
-    private ArrayList<Person> bucket;
+    private static ArrayList<Person> bucket;
+
+    public Bucket() {
+    }
 
     public Bucket(ArrayList<Person> bucket) {
         this.bucket = bucket;
@@ -25,6 +28,4 @@ public class Bucket {
     public void addPerson(Person person) {
         this.bucket.add(person);
     }
-
-
 }
