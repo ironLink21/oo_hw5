@@ -8,7 +8,7 @@ import Person.*;
 /**
  * Created by seth on 11/30/16.
  */
-public class match1 extends Matcher {
+public class id_birth extends Matcher {
 
     private void iterate(ArrayList<Person> persons) {
         for(int i = 0; i < persons.size(); i++) {
@@ -26,6 +26,21 @@ public class match1 extends Matcher {
         }
     }
 
+    private ArrayList<Person> removeNull(ArrayList<Person> persons) {
+        ArrayList<Person> tempArray = null;
+        for(int i = 0; i < persons.size(); i++) {
+            Person p1 = persons.get(i);
+
+            if(p1.getSSN() != null &&
+                    p1.getBirthMonth() != null &&
+                    p1.getBirthDay() != null &&
+                    p1.getBirthYear() != null) {
+                tempArray.add(p1);
+            }
+        }
+        return tempArray;
+    }
+
     @Override
     public void operation1() {
         this.bucket = new Bucket().getBucket();
@@ -35,6 +50,12 @@ public class match1 extends Matcher {
 
     @Override
     public void operation2() {
+        this.adults = removeNull(this.adults);
+        this.children = removeNull(this.children);
+    }
+
+    @Override
+    public void operation3() {
         iterate(this.adults);
         iterate(this.children);
     }
