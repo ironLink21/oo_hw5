@@ -7,9 +7,8 @@ import Person.Bucket;
  */
 public class XmlParser implements Parser {
     @Override
-    public Bucket openFile(String location) throws Exception {
+    public void openFile(String location) throws Exception {
 //        NOTE: I didn't have time to get this working, it will parse JSON files thought so that data does work.
 
-        return null;
     }
 }

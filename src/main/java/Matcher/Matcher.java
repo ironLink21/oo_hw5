@@ -21,7 +21,7 @@ abstract class Matcher {
     public abstract void operation2();
     public abstract void operation3();
 
-    public void templat_method() {
+    public void template_method() {
         setup();
         operation1();
         operation2();

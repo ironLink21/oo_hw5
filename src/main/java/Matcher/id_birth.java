@@ -17,6 +17,7 @@ public class id_birth extends Matcher {
                 Person p2 = persons.get(j);
 
                 if(p1.getSSN() == p2.getSSN() &&
+                        p1.getStateFileNumber() == p2.getStateFileNumber() &&
                         p1.getBirthMonth() == p2.getBirthMonth() &&
                         p1.getBirthDay() == p2.getBirthDay() &&
                         p1.getBirthYear() == p2.getBirthYear()) {
@@ -32,6 +33,7 @@ public class id_birth extends Matcher {
             Person p1 = persons.get(i);
 
             if(p1.getSSN() != null &&
+                    p1.getStateFileNumber() != null &&
                     p1.getBirthMonth() != null &&
                     p1.getBirthDay() != null &&
                     p1.getBirthYear() != null) {

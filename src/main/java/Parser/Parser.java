@@ -1,8 +1,5 @@
 package Parser;
 
-import Person.Bucket;
-import Person.Person;
-
 import java.io.File;
 import java.util.regex.Pattern;
 
