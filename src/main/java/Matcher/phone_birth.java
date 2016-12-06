@@ -43,11 +43,11 @@ public class phone_birth extends Matcher {
                 Person p1 = this.adults.get(i);
                 Person p2 = this.adults.get(j);
 
-                if(((Adult) p1).getPhone1() == ((Adult) p2).getPhone1() &&
-                        ((Adult) p1).getPhone2() == ((Adult) p2).getPhone2() &&
-                        p1.getBirthMonth() == p2.getBirthMonth() &&
-                        p1.getBirthDay() == p2.getBirthDay() &&
-                        p1.getBirthYear() == p2.getBirthYear()) {
+                if(((Adult) p1).getPhone1().equals(((Adult) p2).getPhone1()) &&
+                        ((Adult) p1).getPhone2().equals(((Adult) p2).getPhone2()) &&
+                        p1.getBirthMonth().equals(p2.getBirthMonth()) &&
+                        p1.getBirthDay().equals(p2.getBirthDay()) &&
+                        p1.getBirthYear().equals(p2.getBirthYear())) {
                     this.matches.put(p1, p2);
                 }
             }

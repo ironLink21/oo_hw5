@@ -42,12 +42,12 @@ public class mother_birth extends Matcher {
                 Person p1 = this.children.get(i);
                 Person p2 = this.children.get(j);
 
-                if(((Child) p1).getMotherFirstName() == ((Child) p2).getMotherFirstName() &&
-                        ((Child) p1).getMotherMiddleName() == ((Child) p2).getMotherMiddleName() &&
-                        ((Child) p1).getMotherLastName() == ((Child) p2).getMotherLastName() &&
-                        p1.getBirthMonth() == p2.getBirthMonth() &&
-                        p1.getBirthDay() == p2.getBirthDay() &&
-                        p1.getBirthYear() == p2.getBirthYear()) {
+                if(((Child) p1).getMotherFirstName().equals(((Child) p2).getMotherFirstName()) &&
+                        ((Child) p1).getMotherMiddleName().equals(((Child) p2).getMotherMiddleName()) &&
+                        ((Child) p1).getMotherLastName().equals(((Child) p2).getMotherLastName()) &&
+                        p1.getBirthMonth().equals(p2.getBirthMonth()) &&
+                        p1.getBirthDay().equals(p2.getBirthDay()) &&
+                        p1.getBirthYear().equals(p2.getBirthYear())) {
                     this.matches.put(p1, p2);
                 }
             }

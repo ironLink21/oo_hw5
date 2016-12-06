@@ -16,11 +16,11 @@ public class id_birth extends Matcher {
                 Person p1 = persons.get(i);
                 Person p2 = persons.get(j);
 
-                if(p1.getSocialSecurityNumber() == p2.getSocialSecurityNumber() &&
-                        p1.getStateFileNumber() == p2.getStateFileNumber() &&
-                        p1.getBirthMonth() == p2.getBirthMonth() &&
-                        p1.getBirthDay() == p2.getBirthDay() &&
-                        p1.getBirthYear() == p2.getBirthYear()) {
+                if(p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber()) &&
+                        p1.getStateFileNumber().equals(p2.getStateFileNumber()) &&
+                        p1.getBirthMonth().equals(p2.getBirthMonth()) &&
+                        p1.getBirthDay().equals(p2.getBirthDay()) &&
+                        p1.getBirthYear().equals(p2.getBirthYear())) {
                     this.matches.put(p1, p2);
                 }
             }

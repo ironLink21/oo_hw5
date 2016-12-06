@@ -40,10 +40,10 @@ public class multibirth_gender extends Matcher {
                 Person p1 = this.children.get(i);
                 Person p2 = this.children.get(j);
 
-                if(((Child) p1).getIsPartOfMultipleBirth() == ((Child) p2).getIsPartOfMultipleBirth() &&
-                        ((Child) p1).getBirthOrder() == ((Child) p2).getBirthOrder() &&
-                        ((Child) p1).getBirthCounty() == ((Child) p2).getBirthCounty() &&
-                        p1.getGender() == p2.getGender()) {
+                if(((Child) p1).getIsPartOfMultipleBirth().equals(((Child) p2).getIsPartOfMultipleBirth()) &&
+                        ((Child) p1).getBirthOrder().equals(((Child) p2).getBirthOrder()) &&
+                        ((Child) p1).getBirthCounty().equals(((Child) p2).getBirthCounty()) &&
+                        p1.getGender().equals(p2.getGender())) {
                     this.matches.put(p1, p2);
                 }
             }

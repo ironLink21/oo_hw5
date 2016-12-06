@@ -16,10 +16,10 @@ public class names_gender extends Matcher {
                 Person p1 = persons.get(i);
                 Person p2 = persons.get(j);
 
-                if(p1.getFirstName() == p2.getFirstName() &&
-                        p1.getMiddleName() == p2.getMiddleName() &&
-                        p1.getLastName() == p2.getLastName() &&
-                        p1.getGender() == p2.getGender()) {
+                if(p1.getFirstName().equals(p2.getFirstName()) &&
+                        p1.getMiddleName().equals(p2.getMiddleName()) &&
+                        p1.getLastName().equals(p2.getLastName()) &&
+                        p1.getGender().equals(p2.getGender())) {
                     this.matches.put(p1, p2);
                 }
             }

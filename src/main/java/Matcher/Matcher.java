@@ -44,19 +44,28 @@ abstract class Matcher {
         String outFile = new File(this.path).getAbsolutePath();
 
         try {
+
+            File file = new File(outFile);
+
+            if(file.delete()){
+                System.out.println(file.getName() + " is deleted!");
+            }else{
+                System.out.println("Delete operation is failed.");
+            }
+
             FileWriter writer = new FileWriter(outFile, true);
 
             if(this.matches.size() != 0) {
-                System.out.print("Matches: ");
-                writer.write("Matches: " );
+                System.out.print("Matches:\n");
+                writer.write("Matches:\n" );
 
                 for(Map.Entry<Person, Person> entry : this.matches.entrySet()) {
-                    System.out.print("[" + entry.getKey().getObjectId() + " , " + entry.getValue().getObjectId() + "]");
-                    writer.write("[" + entry.getKey().getObjectId() + " , " + entry.getValue().getObjectId() + "]\n");
+                    System.out.print("\t[" + entry.getKey().getObjectId() + " , " + entry.getValue().getObjectId() + "]\n");
+                    writer.write("\t[" + entry.getKey().getObjectId() + " , " + entry.getValue().getObjectId() + "]\n");
                 }
             } else {
-                System.out.print("No matches were found.");
-                writer.write("No matches were found.");
+                System.out.print("No matches were found.\n");
+                writer.write("No matches were found.\n");
             }
 
             writer.close();

@@ -16,10 +16,10 @@ public class id_name extends Matcher {
                 Person p1 = persons.get(i);
                 Person p2 = persons.get(j);
 
-                if(p1.getSocialSecurityNumber() == p2.getSocialSecurityNumber() &&
-                        p1.getFirstName() == p2.getFirstName() &&
-                        p1.getMiddleName() == p2.getMiddleName() &&
-                        p1.getLastName() == p2.getLastName()) {
+                if(p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber()) &&
+                        p1.getFirstName().equals(p2.getFirstName()) &&
+                        p1.getMiddleName().equals(p2.getMiddleName()) &&
+                        p1.getLastName().equals(p2.getLastName())) {
                     this.matches.put(p1, p2);
                 }
             }
@@ -33,6 +33,7 @@ public class id_name extends Matcher {
 
             if(p1.getSocialSecurityNumber() != null &&
                     p1.getFirstName() != null &&
+                    p1.getMiddleName() != null &&
                     p1.getLastName() != null) {
                 tempArray.add(p1);
             }
