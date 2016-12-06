@@ -12,14 +12,16 @@ import java.util.HashMap;
 public class phone_birth extends Matcher {
     @Override
     public void operation1() {
+        this.adults = new ArrayList<Person>();
+        this.children = new ArrayList<Person>();
         this.bucket = new Bucket().getBucket();
         this.matches = new HashMap<Person, Person>();
-        this.path = "documents/matches_6.txt";
+        this.path = "src/documents/matches_6.txt";
     }
 
     @Override
     public void operation2() {
-        ArrayList<Person> tempArray = null;
+        ArrayList<Person> tempArray = new ArrayList<Person>();
         for(int i = 0; i < this.adults.size(); i++) {
             Person p1 = this.adults.get(i);
 

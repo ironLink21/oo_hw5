@@ -1,6 +1,7 @@
 package Parser;
 
-import Person.*;
+import Person.Person;
+import Person.Bucket;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

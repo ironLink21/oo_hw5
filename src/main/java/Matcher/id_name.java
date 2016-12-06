@@ -16,7 +16,7 @@ public class id_name extends Matcher {
                 Person p1 = persons.get(i);
                 Person p2 = persons.get(j);
 
-                if(p1.getSSN() == p2.getSSN() &&
+                if(p1.getSocialSecurityNumber() == p2.getSocialSecurityNumber() &&
                         p1.getFirstName() == p2.getFirstName() &&
                         p1.getMiddleName() == p2.getMiddleName() &&
                         p1.getLastName() == p2.getLastName()) {
@@ -27,11 +27,11 @@ public class id_name extends Matcher {
     }
 
     private ArrayList<Person> removeNull(ArrayList<Person> persons) {
-        ArrayList<Person> tempArray = null;
+        ArrayList<Person> tempArray = new ArrayList<Person>();
         for(int i = 0; i < persons.size(); i++) {
             Person p1 = persons.get(i);
 
-            if(p1.getSSN() != null &&
+            if(p1.getSocialSecurityNumber() != null &&
                     p1.getFirstName() != null &&
                     p1.getLastName() != null) {
                 tempArray.add(p1);
@@ -42,9 +42,11 @@ public class id_name extends Matcher {
 
     @Override
     public void operation1() {
+        this.adults = new ArrayList<Person>();
+        this.children = new ArrayList<Person>();
         this.bucket = new Bucket().getBucket();
         this.matches = new HashMap<Person, Person>();
-        this.path = "documents/matches_2.txt";
+        this.path = "src/documents/matches_2.txt";
     }
 
     @Override

@@ -11,14 +11,16 @@ import java.util.HashMap;
 public class multibirth_gender extends Matcher {
     @Override
     public void operation1() {
+        this.adults = new ArrayList<Person>();
+        this.children = new ArrayList<Person>();
         this.bucket = new Bucket().getBucket();
         this.matches = new HashMap<Person, Person>();
-        this.path = "documents/matches_4.txt";
+        this.path = "src/documents/matches_4.txt";
     }
 
     @Override
     public void operation2() {
-        ArrayList<Person> tempArray = null;
+        ArrayList<Person> tempArray = new ArrayList<Person>();
         for(int i = 0; i < this.children.size(); i++) {
             Person p1 = this.children.get(i);
 

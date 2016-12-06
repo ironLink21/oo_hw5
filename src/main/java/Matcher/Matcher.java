@@ -22,8 +22,8 @@ abstract class Matcher {
     public abstract void operation3();
 
     public void template_method() {
-        setup();
         operation1();
+        setup();
         operation2();
         operation3();
         print_matches();
@@ -45,13 +45,20 @@ abstract class Matcher {
 
         try {
             FileWriter writer = new FileWriter(outFile, true);
-            System.out.print("Matches: ");
-            writer.write("Matches: " );
 
-            for(Map.Entry<Person, Person> entry : this.matches.entrySet()) {
-                System.out.print("[" + entry.getKey().getObjectId() + " , " + entry.getValue().getObjectId() + "]");
-                writer.write("[" + entry.getKey().getObjectId() + " , " + entry.getValue().getObjectId() + "]\n");
+            if(this.matches.size() != 0) {
+                System.out.print("Matches: ");
+                writer.write("Matches: " );
+
+                for(Map.Entry<Person, Person> entry : this.matches.entrySet()) {
+                    System.out.print("[" + entry.getKey().getObjectId() + " , " + entry.getValue().getObjectId() + "]");
+                    writer.write("[" + entry.getKey().getObjectId() + " , " + entry.getValue().getObjectId() + "]\n");
+                }
+            } else {
+                System.out.print("No matches were found.");
+                writer.write("No matches were found.");
             }
+
             writer.close();
 
         } catch (IOException e ) {

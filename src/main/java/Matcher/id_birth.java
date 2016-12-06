@@ -16,7 +16,7 @@ public class id_birth extends Matcher {
                 Person p1 = persons.get(i);
                 Person p2 = persons.get(j);
 
-                if(p1.getSSN() == p2.getSSN() &&
+                if(p1.getSocialSecurityNumber() == p2.getSocialSecurityNumber() &&
                         p1.getStateFileNumber() == p2.getStateFileNumber() &&
                         p1.getBirthMonth() == p2.getBirthMonth() &&
                         p1.getBirthDay() == p2.getBirthDay() &&
@@ -28,11 +28,11 @@ public class id_birth extends Matcher {
     }
 
     private ArrayList<Person> removeNull(ArrayList<Person> persons) {
-        ArrayList<Person> tempArray = null;
+        ArrayList<Person> tempArray = new ArrayList<Person>();
         for(int i = 0; i < persons.size(); i++) {
             Person p1 = persons.get(i);
 
-            if(p1.getSSN() != null &&
+            if(p1.getSocialSecurityNumber() != null &&
                     p1.getStateFileNumber() != null &&
                     p1.getBirthMonth() != null &&
                     p1.getBirthDay() != null &&
@@ -45,9 +45,11 @@ public class id_birth extends Matcher {
 
     @Override
     public void operation1() {
+        this.adults = new ArrayList<Person>();
+        this.children = new ArrayList<Person>();
         this.bucket = new Bucket().getBucket();
         this.matches = new HashMap<Person, Person>();
-        this.path = "documents/matches_1.txt";
+        this.path = "src/documents/matches_1.txt";
     }
 
     @Override

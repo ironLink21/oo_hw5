@@ -27,7 +27,7 @@ public class names_gender extends Matcher {
     }
 
     private ArrayList<Person> removeNull(ArrayList<Person> persons) {
-        ArrayList<Person> tempArray = null;
+        ArrayList<Person> tempArray = new ArrayList<Person>();
         for(int i = 0; i < persons.size(); i++) {
             Person p1 = persons.get(i);
 
@@ -43,9 +43,11 @@ public class names_gender extends Matcher {
 
     @Override
     public void operation1() {
+        this.adults = new ArrayList<Person>();
+        this.children = new ArrayList<Person>();
         this.bucket = new Bucket().getBucket();
         this.matches = new HashMap<Person, Person>();
-        this.path = "documents/matches_5.txt";
+        this.path = "src/documents/matches_5.txt";
     }
 
     @Override
