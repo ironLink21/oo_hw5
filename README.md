@@ -9,8 +9,11 @@ refactor using Template Method instead of Strategy pattern for mathers
 Strategy pattern for Person
 Strategy pattern for Parser
 
+# Not Implemented
+XML parsing
+
 # Docs
-UML diagram can be found in "./documents/assign5.vpp" (visual paradigm file) (this has all 3 files inside of the one project)
+UML diagram can be found in "/assign5.vpp" (visual paradigm file) (this has all 3 files inside of the one project)
 
 # Dependencies
 jackson-annotations 2.8.5
