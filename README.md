@@ -28,4 +28,5 @@ on a lot of redundant code and also make the code more readable.  This also allo
 was doing instead of creating a new class that had to create a lot of the same objects.  With the template pattern I just 
 had to use it's bucket that was filled once and then I copied it into each template class so that each class could do it's 
 own thing without changing the original bucket.  The template pattern also allowed me to run functions in sequence.  This
-allowed me to perform more specific things in each function. 
+allowed me to perform more specific things in each function. By using the template pattern I was able to perform more useful 
+tests or have the ability to implement more useful tests.
