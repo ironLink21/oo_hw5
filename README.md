@@ -8,6 +8,7 @@ Tests for all matchers
 refactor using Template Method instead of Strategy pattern for mathers
 Strategy pattern for Person
 Strategy pattern for Parser
+all diagrams created (state, action, UML)
 
 # Not Implemented
 XML parsing
