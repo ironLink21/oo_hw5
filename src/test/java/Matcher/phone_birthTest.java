@@ -95,5 +95,4 @@ public class phone_birthTest {
         assertEquals(5, matcher.bucket.size());
         assertEquals(0, matcher.matches.size());
     }
-
 }
